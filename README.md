@@ -8,3 +8,9 @@ To replicate this environment or run the inference pipeline locally, install the
 
 ```bash
 pip install -r requirements.txt
+
+from transformers import pipeline
+
+classifier = pipeline("text-classification", model="zeeshan-hf/distilbert-goodreads-genres")
+prediction = classifier("The magic system and world-building were absolutely phenomenal!")
+print(prediction)
